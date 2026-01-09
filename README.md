@@ -1,11 +1,14 @@
-# How to enter the unique value in WinForms DataGrid (SfDataGrid) ?
+# How to Enter the Unique Value in WinForms DataGrid?
 
-How to enter the unique value in WinForms DataGrid (SfDataGrid) ?
+This sample illustrates how to enter the unique value in [WinForms DataGrid](https://www.syncfusion.com/winforms-ui-controls/datagrid) (SfDataGrid).
 
-# About the sample
-In SfDataGrid you can make a specific column accept unique value per row using SfDataGrid.CurrentCellValidating event.
+In `DataGrid` you can make a specific column accept unique value per row using [SfDataGrid.CurrentCellValidating](https://help.syncfusion.com/cr/windowsforms/Syncfusion.WinForms.DataGrid.SfDataGrid.html#Syncfusion_WinForms_DataGrid_SfDataGrid_CurrentCellValidating) event.
+
+
+#### C#
 ```c#
 sfDataGrid1.CurrentCellValidating += SfDataGrid1_CurrentCellValidating;
+
 private void SfDataGrid1_CurrentCellValidating(object sender, Syncfusion.WinForms.DataGrid.Events.CurrentCellValidatingEventArgs e)
 {
     if (e.Column.MappingName == "OrderID")
@@ -22,5 +25,8 @@ private void SfDataGrid1_CurrentCellValidating(object sender, Syncfusion.WinForm
     }
 }
 ```
+
+![DataGrid entering unique value using CurrentCellValidating](EnterUniqueValue.gif)
+
 ## Requirements to run the demo
  Visual Studio 2015 and above versions
